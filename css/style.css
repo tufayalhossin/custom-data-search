@@ -1,0 +1,94 @@
+*, *::after, *::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.select-box {
+	max-width: 300px;
+	width: 100%;
+
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
+
+.select-box .box-head,
+.select-box .listBox .search-box {
+	position: relative;
+}
+
+.select-box .box-head strong {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	display: inline-block;
+}
+
+.select-box .box-head span,
+.select-box .listBox .search-box span {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.select-box .box-head strong,
+.select-box .box-head span,
+.select-box .listBox .search-box input,
+.select-box .listBox .search-box span {
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+}
+
+.select-box .box-head span,
+.select-box .listBox .search-box span {
+	background: #fff;
+	height: 38px;
+	line-height: 38px;
+}
+
+.select-box .box-head,
+.select-box .box-head strong,
+.select-box .box-head span,
+.select-box .listBox .list ul li {
+	cursor: pointer;
+}
+
+.select-box .listBox {
+	max-height: 0;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	width: 100%;
+	overflow: hidden;
+}
+
+.select-box .listBox.open {
+	max-height: 100vh;
+	opacity: 1;
+}
+
+.select-box .listBox .search-box input {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #ccc;
+}
+
+
+.select-box .listBox .list {
+	max-height: 200px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.select-box .listBox .list ul {
+	list-style-type: none;
+}
+
+.select-box .listBox .list ul li {
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+}
+
+.select-box .listBox .list ul li:hover {
+	background: #bbb;
+}
